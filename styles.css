@@ -1,0 +1,158 @@
+/* Import Google's Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Universal Reset & Box-Sizing for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+/* Container for the card UI */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Header Title styling */
+h1 {
+    font-size: 26px;
+    color: #2a3d66;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Label for the dropdown */
+label {
+    font-size: 16px;
+    color: #2a3d66;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Dropdown styling */
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #2a3d66;
+    border: 1px solid #dcdfe3;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f9fbfd;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Focus styling for the dropdown */
+select:focus {
+    border-color: #84a9ff;
+    box-shadow: 0 0 5px rgba(132, 169, 255, 0.5);
+}
+
+/* Time Display styling */
+.time-display {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #4a6073;
+    opacity: 0.8;
+}
+
+/* ATIS output display styling */
+.atis-output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9fbfd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #2a3d66;
+    white-space: pre-wrap;
+    border: 1px solid #dfe3e8;
+    font-family: 'Courier New', Courier, monospace;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #6772e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(67, 87, 133, 0.2);
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #5468ff;
+}
+
+/* Button active state */
+button:active {
+    transform: scale(0.98);
+}
+
+/* New update alert box */
+.new-update-alert {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ff7384;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideInUp 0.5s ease-out forwards;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    0% { transform: translateY(15px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Making the card responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        padding: 12px;
+    }

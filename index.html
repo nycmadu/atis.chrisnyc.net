@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-ATIS Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Keep the Dropdown for Airport selection -->
+        <label for="airportSelect">Choose an airport:</label>
+        <select id="airportSelect">
+            <option value="" disabled selected>Select an airport</option>
+        </select>
+
+        <!-- Display the ATIS data dynamically for different airports from the URL -->
+        <h1 id="airport-code">Fetching Data...</h1>
+
+        <!-- Time since the last ATIS update -->
+        <div class="time-display">
+            Last ATIS update: <span id="update-time">N/A</span> minutes ago.
+        </div>
+
+        <!-- ATIS information display -->
+        <div class="atis-output" id="atisOutput">Loading ATIS data...</div>
+
+        <!-- Button to manually refresh ATIS data -->
+        <button id="refreshBtn" class="refresh-btn">Refresh ATIS</button>
+
+        <!-- Notification for any new updates available -->
+        <div id="newUpdateAlert" class="new-update-alert" hidden>There is a new ATIS update!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
