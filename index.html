@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <!-- Keep the Dropdown for Airport selection -->
+        <!-- Dropdown for Airport selection -->
         <label for="airportSelect">Choose an airport:</label>
         <select id="airportSelect">
             <option value="" disabled selected>Select an airport</option>
         </select>
 
-        <!-- Display the ATIS data dynamically for different airports from the URL -->
+        <!-- Display the ATIS data dynamically for different airports -->
         <h1 id="airport-code">Fetching Data...</h1>
 
         <!-- Time since the last ATIS update -->
@@ -23,14 +23,19 @@
             Last ATIS update: <span id="update-time">N/A</span> minutes ago.
         </div>
 
-        <!-- ATIS information display -->
+        <!-- ATIS data output -->
         <div class="atis-output" id="atisOutput">Loading ATIS data...</div>
 
-        <!-- Button to manually refresh ATIS data -->
+        <!-- Manual refresh button -->
         <button id="refreshBtn" class="refresh-btn">Refresh ATIS</button>
 
-        <!-- Notification for any new updates available -->
+        <!-- Notification alert -->
         <div id="newUpdateAlert" class="new-update-alert" hidden>There is a new ATIS update!</div>
+    </div>
+
+    <!-- VPN Warning Popup -->
+    <div id="vpnWarning" class="vpn-warning-popup" style="display: none;">
+        <strong>Warning:</strong> This website may not function correctly if you are using a VPN or restricted network.
     </div>
 
     <script src="script.js"></script>

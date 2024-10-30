@@ -1,14 +1,14 @@
 /* Import Google's Roboto Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Universal Reset & Box-Sizing for consistency across browsers */
+/* Reset Style */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body */
 body {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
@@ -19,7 +19,7 @@ body {
     color: #333;
 }
 
-/* Container for the card UI */
+/* Container */
 .container {
     background-color: #fff;
     padding: 40px;
@@ -32,7 +32,7 @@ body {
     animation: fadeIn 0.4s ease-out;
 }
 
-/* Header Title styling */
+/* Header */
 h1 {
     font-size: 26px;
     color: #2a3d66;
@@ -40,7 +40,7 @@ h1 {
     font-weight: 600;
 }
 
-/* Label for the dropdown */
+/* Dropdown Label */
 label {
     font-size: 16px;
     color: #2a3d66;
@@ -49,7 +49,7 @@ label {
     font-weight: 500;
 }
 
-/* Dropdown styling */
+/* Dropdown */
 select {
     width: 100%;
     padding: 12px;
@@ -63,13 +63,13 @@ select {
     cursor: pointer;
 }
 
-/* Focus styling for the dropdown */
+/* Dropdown Focus State */
 select:focus {
     border-color: #84a9ff;
     box-shadow: 0 0 5px rgba(132, 169, 255, 0.5);
 }
 
-/* Time Display styling */
+/* Time Display */
 .time-display {
     margin-top: 15px;
     font-size: 16px;
@@ -77,7 +77,7 @@ select:focus {
     opacity: 0.8;
 }
 
-/* ATIS output display styling */
+/* ATIS Data Output */
 .atis-output {
     margin-top: 20px;
     padding: 15px;
@@ -91,7 +91,7 @@ select:focus {
     animation: fadeIn 1s ease forwards;
 }
 
-/* Button styling */
+/* Button */
 button {
     width: 100%;
     padding: 15px;
@@ -107,17 +107,17 @@ button {
     box-shadow: 0px 3px 10px rgba(67, 87, 133, 0.2);
 }
 
-/* Button hover effect */
+/* Button Hover State */
 button:hover {
     background-color: #5468ff;
 }
 
-/* Button active state */
+/* Button Active State */
 button:active {
     transform: scale(0.98);
 }
 
-/* New update alert box */
+/* New Update Alert */
 .new-update-alert {
     margin-top: 15px;
     padding: 10px;
@@ -131,7 +131,42 @@ button:active {
     animation: slideInUp 0.5s ease-out forwards;
 }
 
-/* Custom Animations */
+/* VPN Warning Popup */
+.vpn-warning-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: #ff6666;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -142,17 +177,16 @@ button:active {
     100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Making the card responsive */
+/* Responsive Design */
 @media (max-width: 600px) {
     .container {
         width: 90%;
         padding: 25px;
     }
-
     h1 {
         font-size: 22px;
     }
-
     button {
         padding: 12px;
     }
+}
